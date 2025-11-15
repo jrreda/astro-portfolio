@@ -1,34 +1,45 @@
-# Astro Starter Kit: Basics
+# Personal Portfolio
 
-```sh
-npm create astro@latest -- --template basics
-```
+A modern, responsive portfolio website built with Astro, featuring a clean design and showcasing projects, blog posts, and contact information.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## ✨ Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- Clean, modern portfolio design
+- Project showcase section
+- Blog with dynamic routing
+- Contact page
+- Responsive layout
+- Reusable component architecture
 
 ## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   ├── favicon.svg
+│   ├── images/          # Project and blog images
+│   └── resume.pdf       # Downloadable resume
 ├── src/
+│   ├── components/
+│   │   ├── Header.astro
+│   │   ├── Navbar.astro
+│   │   ├── Footer.astro
+│   │   ├── BlogSection.astro
+│   │   ├── BlogCard.astro
+│   │   ├── MyProjectsSection.astro
+│   │   ├── ProjectCard.astro
+│   │   └── ...
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
-│       └── index.astro
+│       ├── index.astro      # Home page
+│       ├── projects.astro   # Projects page
+│       ├── blog.astro       # Blog listing
+│       ├── blog/
+│       │   └── [slug].astro # Dynamic blog posts
+│       └── contact.astro    # Contact page
 └── package.json
 ```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
 ## 🧞 Commands
 
@@ -43,6 +54,22 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## 🛠️ Tech Stack
+
+- [Astro](https://astro.build) - Static Site Generator
+- HTML/CSS/JavaScript
+- Component-based architecture
+
+## 📝 Customization
+
+To customize this portfolio for your own use:
+
+1. Update personal information in the header and footer components
+2. Add your projects in the projects section
+3. Create blog posts in the blog directory
+4. Replace images in `/public/images/` with your own
+5. Update `resume.pdf` with your own resume
+
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [Astro documentation](https://docs.astro.build) or jump into the [Astro Discord server](https://astro.build/chat).
