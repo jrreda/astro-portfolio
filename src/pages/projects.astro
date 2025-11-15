@@ -14,8 +14,8 @@ const projects = await getCollection("project");
   <Section>
     <h1>{heading}</h1>
     {
-      projects.map((project) => (
-        <ProjectCard project={project} />
+      projects.map((project, index) => (
+        <ProjectCard project={project} loading={index <= 1 ? "eager" : "lazy"} />
 
         <HorizontalSeparator />
       ))

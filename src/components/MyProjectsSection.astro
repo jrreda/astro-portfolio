@@ -17,7 +17,7 @@ const projects = await getCollection("project");
     {
       projects.map((project) => (
         <div class="card">
-          <Image src={project.data.image} alt={project.data.title} width={400} height={300} />
+          <Image src={project.data.image} alt={project.data.title} width={300} height={250} />
           <h3>
             <a href={project.data.liveSiteURL}>{project.data.title}</a>
           </h3>

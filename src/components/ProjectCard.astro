@@ -5,13 +5,15 @@ import ButtonLink from "./ButtonLink.astro";
 
 interface Props {
   project: CollectionEntry<"project">;
+  loading?: "eager" | "lazy";
 }
 
-const { project } = Astro.props;
+const { project, loading = "lazy" } = Astro.props;
 ---
 
 <div class="card">
-  <Image src={project.data.image} alt={project.data.title} width={200} height={200} />
+  <Image src={project.data.image} alt={project.data.title} width={200} height={200} loading={loading} />
+
   <div>
     <h3>{project.data.title}</h3>
     <p class="description">{project.data.description}</p>

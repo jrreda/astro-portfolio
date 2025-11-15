@@ -23,7 +23,14 @@ const { Content } = await render(post);
 <Layout>
   <Section>
     <div class="post">
-      <Image src={post.data.image} alt={post.data.title} class="post-image" width={800} height={400} />
+      <Image
+        src={post.data.image}
+        alt={post.data.title}
+        class="post-image"
+        width={800}
+        height={550}
+        loading="eager"
+      />
       <h1 class="post-title">{post.data.title}</h1>
       <p class="post-date">{post.data.date}</p>
       <Content />
