@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Section from "./Section.astro";
 import SectionHeader from "./SectionHeader.astro";
 import { getCollection } from "astro:content";
@@ -16,7 +17,7 @@ const projects = await getCollection("project");
     {
       projects.map((project) => (
         <div class="card">
-          <img src={project.data.image} alt={project.data.title} />
+          <Image src={project.data.image} alt={project.data.title} width={400} height={300} />
           <h3>
             <a href={project.data.liveSiteURL}>{project.data.title}</a>
           </h3>

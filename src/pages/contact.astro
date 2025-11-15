@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
 import me from "/public/images/me.png";
@@ -11,6 +12,6 @@ const email = "me@jamesqquick.com";
   <Section>
     <h1>{title}</h1>
     <p>You can contact me at <a href={`mailto:${email}`}>{email}.</a></p>
-    <img src={me.src} alt="My photo" />
+    <Image src={me} alt="My photo" width={300} height={300} />
   </Section>
 </Layout>
