@@ -2,6 +2,10 @@
 
 A modern, responsive portfolio website built with Astro, featuring a clean design and showcasing projects, blog posts, and contact information.
 
+## Live Demo
+
+[Live Demo](https://jrreda.netlify.app/)
+
 ## ✨ Features
 
 - Clean, modern portfolio design
@@ -59,6 +63,7 @@ All commands are run from the root of the project, from a terminal:
 - [Astro](https://astro.build) - Static Site Generator
 - HTML/CSS/JavaScript
 - Component-based architecture
+- Netlify for deployment
 
 ## 📝 Customization
 
