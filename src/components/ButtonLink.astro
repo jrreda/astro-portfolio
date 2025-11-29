@@ -3,54 +3,39 @@ interface Props {
   href: string;
   text: string;
   variant?: 'primary' | 'secondary';
-  isDownload?: boolean; 
+  isDownload?: boolean;
 }
 
-const {href, text, variant="primary", isDownload} = Astro.props;
+const { href, text, variant = 'primary', isDownload } = Astro.props;
 ---
 
-
-{isDownload &&
-  <a href={href} download class={`button-link ${variant}`}>{text}</a>
+{
+  isDownload && (
+    <a
+      href={href}
+      download
+      class={`px-8 py-3.5 block w-[230px] text-center no-underline text-lg transition-all duration-300 ease-in-out ${
+        variant === 'primary'
+          ? 'bg-[var(--primary)] text-white hover:bg-white hover:text-[var(--primary)] hover:border hover:border-[var(--primary)]'
+          : 'bg-white text-[var(--primary)] border border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white'
+      }`}
+    >
+      {text}
+    </a>
+  )
 }
 
-{!isDownload &&
-  <a href={href} class={`button-link ${variant}`}>{text}</a>
+{
+  !isDownload && (
+    <a
+      href={href}
+      class={`px-8 py-3.5 block w-[230px] text-center no-underline text-lg transition-all duration-300 ease-in-out ${
+        variant === 'primary'
+          ? 'bg-[var(--primary)] text-white hover:bg-white hover:text-[var(--primary)] hover:border hover:border-[var(--primary)]'
+          : 'bg-white text-[var(--primary)] border border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white'
+      }`}
+    >
+      {text}
+    </a>
+  )
 }
-
-<style>
-  .button-link {
-    padding: 14px 32px;
-    display: block;
-    underline: none;
-    width: 230px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    text-align: center;
-  }
-  
-  .primary {
-    background: var(--primary);
-    color: white;
-    transition: all 0.3s ease;
-  }
-  .primary:hover {
-    background: white;
-    color: var(--primary);
-    border: 1px solid var(--primary);
-    transition: all 0.3s ease;
-  }
-
-  .secondary {
-    background: white;
-    color: var(--primary);
-    border: 1px solid var(--primary);
-    transition: all 0.3s ease;
-  }
-  .secondary:hover {
-    background: var(--primary);
-    color: white;
-    transition: all 0.3s ease;
-  }
-</style>

@@ -1,6 +1,7 @@
 ---
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 ---
 
 <!doctype html>
@@ -18,46 +19,10 @@ import Footer from "../components/Footer.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
   </head>
+
   <body>
     <Navbar />
     <slot />
     <Footer />
   </body>
-  <style is:global>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Epilogue', sans-serif;
-    }
-
-    h1 {
-    weight: 700;
-    font-size: 44px;
-    margin-bottom: 80px;
-  }
-
-    p {
-      line-height: 24px;
-    }
-
-    pre {
-      padding: 16px;
-      border-radius: 5px;
-    }
-    
-    * {
-      box-sizing: border-box;
-      color: var(--dark);
-      margin: 0;
-    }
-
-    :root {
-      --primary: #402eff;
-      --secondary: #f8f9ff;
-      --white: #ffffff;
-      --dark: #21243d;
-      --light: #8695a4;
-      --random: #f7f7f7;
-    }
-  </style>
 </html>

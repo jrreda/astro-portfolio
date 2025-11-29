@@ -1,25 +1,35 @@
 ---
-import { Image } from "astro:assets";
-import Section from "./Section.astro";
-import SectionHeader from "./SectionHeader.astro";
-import { getCollection } from "astro:content";
+import { Image } from 'astro:assets';
+import Section from './Section.astro';
+import SectionHeader from './SectionHeader.astro';
+import { getCollection } from 'astro:content';
 
-const heading = "My Projects";
-const cta = { text: "View All", href: "/projects" };
+const heading = 'My Projects';
+const cta = { text: 'View All', href: '/projects' };
 
-const projects = await getCollection("project");
+const projects = await getCollection('project');
 ---
 
 <Section dark>
   <SectionHeader heading={heading} cta={cta} />
 
-  <div class="projects-container">
+  <div class="grid grid-cols-3 gap-6 max-[700px]:grid-cols-1">
     {
       projects.map((project) => (
-        <div class="card">
-          <Image src={project.data.image} alt={project.data.title} width={300} height={250} />
-          <h3>
-            <a href={project.data.liveSiteURL}>{project.data.title}</a>
+        <div class="overflow-hidden transition-transform duration-300 flex flex-col">
+          <Image
+            src={project.data.image}
+            alt={project.data.title}
+            width={300}
+            height={250}
+          />
+          <h3 class="mt-5">
+            <a
+              href={project.data.liveSiteURL}
+              class="no-underline text-[var(--dark)] font-semibold text-lg"
+            >
+              {project.data.title}
+            </a>
           </h3>
           {/* <p>{project.data.description}</p>
           <div class="cta-container">
@@ -31,35 +41,3 @@ const projects = await getCollection("project");
     }
   </div>
 </Section>
-
-<style>
-  .projects-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
-
-    .card {
-      overflow: hidden;
-      transition: transform 0.3s;
-      display: flex;
-      flex-direction: column;
-    }
-
-    h3 {
-      margin-top: 20px;
-    }
-
-    a {
-      text-decoration: none;
-      color: var(--dark);
-      font-weight: 600;
-      font-size: 18px;
-    }
-
-    @media (max-width: 700px) {
-      & {
-        grid-template-columns: 1fr;
-      }
-    }
-  }
-</style>
