@@ -5,17 +5,17 @@
     "description":
       "A fast, scalable admin panel for managing products, orders, and sales analytics. Built with React, Next.js, Firebase, and TailwindCSS.",
     "image": "/images/projects/project-1.png",
-    "githubURL": "https://github.com/jamesqquick",
-    "liveSiteURL": "https://jamesqquick.com"
+    "githubURL": "https://github.com/jrreda_",
+    "liveSiteURL": "https://github.com/jrreda_"
   },
   {
     "title": "SaaS Landing Page",
     "slug": "project-2",
     "description":
-      "A redesign of ABC’s landing page, improving UI/UX, conversion rates, and performance. Built with Next.js, TailwindCSS, and Framer Motion.",
+      "A modern landing page with improved UI/UX, conversion rates, and performance. Built with Next.js, TailwindCSS, and Framer Motion.",
     "image": "/images/projects/project-2.png",
-    "githubURL": "https://github.com/jamesqquick",
-    "liveSiteURL": "https://jamesqquick.com"
+    "githubURL": "https://github.com/jrreda_",
+    "liveSiteURL": "https://github.com/jrreda_"
   },
   {
     "title": "DevTools Chrome Extension",
@@ -23,7 +23,7 @@
     "description":
       "A Chrome DevTools extension for monitoring API requests in real-time. It provides live request logging and response analysis for developers.",
     "image": "/images/projects/project-3.png",
-    "githubURL": "https://github.com/jamesqquick",
-    "liveSiteURL": "https://jamesqquick.com"
+    "githubURL": "https://github.com/jrreda_",
+    "liveSiteURL": "https://github.com/jrreda_"
   }
 ]
