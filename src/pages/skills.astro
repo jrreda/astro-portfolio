@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
+import SkillBadge from '../components/SkillBadge.astro';
 import skillsData from '../data/skills.json';
 import PageHeader from '../components/PageHeader.astro';
 
@@ -24,11 +25,11 @@ const categories = Object.keys(skillsData);
             <h2 class="text-2xl font-semibold mb-4 text-[var(--primary)]">
               {category}
             </h2>
-            <ul class="list-none space-y-3">
+            <div class="flex flex-wrap gap-3">
               {skillsData[category].map((skill) => (
-                <li class="text-[var(--dark)] text-lg">{skill}</li>
+                <SkillBadge skill={skill} />
               ))}
-            </ul>
+            </div>
           </div>
         ))
       }
