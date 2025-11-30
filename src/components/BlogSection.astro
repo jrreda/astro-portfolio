@@ -5,9 +5,9 @@ import Section from "./Section.astro";
 import HorizontalSeparator from "./HorizontalSeparator.astro";
 import BlogCard from "./BlogCard.astro";
 
-//query blog posts
+// query blog posts from the blog collection
 const heading = "Blog";
-const cta = { text: "View blog", href: "/blog" };
+const cta = { text: "View All", href: "/blog" };
 
 const blog = await getCollection("blog");
 ---

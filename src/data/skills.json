@@ -1,0 +1,92 @@
+{
+  "Frontend": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Vue.js",
+    "Next.js",
+    "Astro",
+    "Bootstrap",
+    "Tailwind CSS",
+    "Styled Components",
+    "shadcn/ui"
+  ],
+  "Backend": [
+    "Node.js",
+    "Express.js",
+    "Nest.js",
+    "Laravel",
+    "Django",
+    "Flask",
+    "RESTful APIs"
+  ],
+  "Databases": [
+    "MySQL",
+    "PostgreSQL",
+    "SQLite",
+    "MongoDB",
+    "Redis",
+    "Elasticsearch"
+  ],
+  "Cloud & Hosting": [
+    "AWS",
+    "Firebase",
+    "Supabase",
+    "Vercel",
+    "Netlify"
+  ],
+  "Tools": [
+    "Git",
+    "Docker",
+    "Kubernetes",
+    "CI/CD",
+    "Linux",
+    "macOS",
+    "XAMPP",
+    "Herd",
+    "Cursor",
+    "Postman",
+    "Vercel AI SDK",
+    "Agile",
+    "Scrum",
+    "Kanban"
+  ],
+  "ORM": [
+    "Eloquent ORM",
+    "Django ORM",
+    "SQLAlchemy",
+    "Prisma",
+    "Drizzle ORM"
+  ],
+  "Data Science": [
+    "Python",
+    "R",
+    "Pandas",
+    "NumPy",
+    "SciPy",
+    "Matplotlib",
+    "Seaborn",
+    "Plotly",
+    "Bokeh",
+    "Tableau",
+    "Power BI"
+  ],
+  "Machine Learning": [
+    "Scikit-learn",
+    "TensorFlow",
+    "PyTorch"
+  ],
+  "Design": [
+    "Figma",
+    "Adobe XD",
+    "Adobe Photoshop",
+    "Adobe Illustrator",
+    "Adobe InDesign",
+    "Adobe Premiere Pro",
+    "Adobe After Effects",
+    "Adobe Lightroom",
+    "Cinema 4D"
+  ]
+}

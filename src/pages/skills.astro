@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import skillsData from '../data/skills.json';
+import PageHeader from '../components/PageHeader.astro';
+
+const heading = 'Skills & Tools 🛠️';
+
+// Get all categories
+const categories = Object.keys(skillsData);
+---
+
+<Layout title={heading}>
+  <Section>
+    <PageHeader heading={heading} />
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+    >
+      {
+        categories.map((category) => (
+          <div>
+            <h2 class="text-2xl font-semibold mb-4 text-[var(--primary)]">
+              {category}
+            </h2>
+            <ul class="list-none space-y-3">
+              {skillsData[category].map((skill) => (
+                <li class="text-[var(--dark)] text-lg">{skill}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+</Layout>

@@ -1,0 +1,17 @@
+---
+interface Props {
+  heading: string;
+}
+
+const { heading } = Astro.props;
+---
+
+<header class="mb-8">
+  <h1 class="text-4xl font-bold text-[var(--primary)]">{heading}</h1>
+  {Astro.slots.has('subtitle') && (
+    <p class="text-[var(--dark)] mb-8 text-sm mt-4">
+      <slot name="subtitle" />
+    </p>
+  )}
+</header>
+

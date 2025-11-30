@@ -14,6 +14,6 @@ const { heading, cta } = Astro.props;
   <h2 class="m-0 text-[32px] font-semibold">{heading}</h2>
   <a
     href={cta.href}
-    class="text-base no-underline font-normal text-[var(--dark)]">{cta.text}</a
+    class="text-base no-underline font-normal text-[var(--dark)] hover:text-[var(--primary)] transition duration-100 hover:underline">{cta.text}</a
   >
 </div>

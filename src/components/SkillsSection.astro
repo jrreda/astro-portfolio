@@ -1,0 +1,48 @@
+---
+import Section from './Section.astro';
+import SectionHeader from './SectionHeader.astro';
+import skillsData from '../data/skills.json';
+
+const heading = 'Skills & Tools';
+const cta = { text: 'View All', href: '/skills' };
+
+// Get categories for preview (show first 3 most relevant categories)
+// Prioritize: Frontend, Backend, Languages, or Tools
+const priorityCategories = [
+  'Frontend',
+  'Backend',
+  'Languages',
+  'Tools',
+  'Frameworks',
+];
+const allCategories = Object.keys(skillsData);
+const categories = priorityCategories
+  .filter((cat) => allCategories.includes(cat))
+  .slice(0, 3);
+---
+
+<Section>
+  <SectionHeader heading={heading} cta={cta} />
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {
+      categories.map((category) => (
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-[var(--primary)]">
+            {category}
+          </h3>
+          <ul class="list-none space-y-2">
+            {skillsData[category].slice(0, 4).map((skill) => (
+              <li class="text-[var(--dark)]">{skill}</li>
+            ))}
+            {skillsData[category].length > 4 && (
+              <li class="text-[var(--light)] text-sm">
+                +{skillsData[category].length - 4} more
+              </li>
+            )}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</Section>
