@@ -1,17 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
+import PageHeader from '../components/PageHeader.astro';
+
+const heading = 'Now ⏳';
+const pageTitle = 'Now - What I\'m Currently Focused On';
 ---
 
-<Layout title="Now - What I'm Currently Focused On">
+<Layout title={pageTitle}>
   <Section>
-    <h1 class="text-4xl font-bold text-[var(--primary)]">Now</h1>
-    <p class="text-[var(--dark)] mb-8 text-sm">
-      This is what I'm currently focused on. Last updated: <time
-        class="text-[var(--primary)]"
-        datetime="2025-11-29">November 29, 2025</time
-      >
-    </p>
+    <PageHeader heading={heading}>
+      <span slot="subtitle">
+        This is what I'm currently focused on. Last updated: <time
+          class="text-[var(--primary)]"
+          datetime="2025-11-30">November 30, 2025</time
+        >
+      </span>
+    </PageHeader>
 
     <div class="space-y-8">
       <section>

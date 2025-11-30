@@ -4,15 +4,16 @@ import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 import HorizontalSeparator from "../components/HorizontalSeparator.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import PageHeader from "../components/PageHeader.astro";
 
-const heading = "My Projects";
-
+const heading = "My Projects 🚀";
+const pageTitle = "My Projects - My Latest Projects";
 const projects = await getCollection("project");
 ---
 
-<Layout>
+<Layout title={pageTitle}>
   <Section>
-    <h1>{heading}</h1>
+    <PageHeader heading={heading} />
     {
       projects.map((project, index) => (
         <ProjectCard project={project} loading={index <= 1 ? "eager" : "lazy"} />

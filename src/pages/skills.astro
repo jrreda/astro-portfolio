@@ -5,12 +5,13 @@ import skillsData from '../data/skills.json';
 import PageHeader from '../components/PageHeader.astro';
 
 const heading = 'Skills & Tools 🛠️';
+const pageTitle = 'Skills and Tools I Use - My Tech stack';
 
 // Get all categories
 const categories = Object.keys(skillsData);
 ---
 
-<Layout title={heading}>
+<Layout title={pageTitle}>
   <Section>
     <PageHeader heading={heading} />
 

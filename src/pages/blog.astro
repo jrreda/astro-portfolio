@@ -4,15 +4,17 @@ import Section from "../components/Section.astro";
 import { getCollection } from "astro:content";
 import BlogCard from "../components/BlogCard.astro";
 import HorizontalSeparator from "../components/HorizontalSeparator.astro";
+import PageHeader from "../components/PageHeader.astro";
 
-const heading = "Blog";
+const heading = "Blog 📝";
+const pageTitle = "Blog - My Latest Thoughts and Writings";
 
 const blog = await getCollection("blog");
 ---
 
-<Layout>
+<Layout title={pageTitle}>
 	<Section>
-    <h1>{heading}</h1>
+    <PageHeader heading={heading} />
 		{blog.map((post) => (
       <BlogCard post={post} />
       <HorizontalSeparator />

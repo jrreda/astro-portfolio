@@ -1,17 +1,24 @@
 ---
-import { Image } from "astro:assets";
-import Section from "../components/Section.astro";
-import Layout from "../layouts/Layout.astro";
-import me from "/public/images/me.png";
+import { Image } from 'astro:assets';
+import Section from '../components/Section.astro';
+import Layout from '../layouts/Layout.astro';
+import me from '/public/images/me.png';
+import PageHeader from '../components/PageHeader.astro';
 
-const title = "Contact";
-const email = "ma7moudr3d4@gmail.com";
+const heading = 'Contact 📞';
+const email = 'ma7moudr3d4@gmail.com';
+const pageTitle = 'Contact - Get in Touch with Me';
 ---
 
-<Layout title="Contact">
+<Layout title={pageTitle}>
   <Section>
-    <h1>{title}</h1>
-    <p>You can contact me at <a href={`mailto:${email}`}>{email}.</a></p>
+    <PageHeader heading={heading} />
+    <p>
+      You can contact me at <a
+        href={`mailto:${email}`}
+        class="text-[var(--primary)] hover:text-[var(--primary)] transition duration-100 hover:underline"
+        >{email}</a>.
+    </p>
     <Image src={me} alt="Me" width={300} height={300} loading="eager" />
   </Section>
 </Layout>
