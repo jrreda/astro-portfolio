@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+---
+
+<Layout title="Now">
+  <Section>
+    <h1 class="text-4xl font-bold text-[var(--primary)]">Now</h1>
+    <p class="text-[var(--dark)] mb-8 text-sm">
+      This is what I'm currently focused on. Last updated: <time
+        class="text-[var(--primary)]"
+        datetime="2025-11-29">November 29, 2025</time
+      >
+    </p>
+
+    <div class="space-y-8">
+      <section>
+        <h2 class="text-2xl mb-4 text-[var(--primary)]">What I'm Working On</h2>
+        <ul
+          class="list-disc list-inside space-y-2 text-[var(--dark)] leading-7"
+        >
+          <li>
+            Building and improving my portfolio website with <strong
+              >Astro</strong>
+          </li>
+          <li>
+            Developing full-stack web applications with <strong>Nextjs</strong> and
+            <strong>Vercel AI SDK</strong>
+          </li>
+          <li>
+            Compining my AI and software engineering skills to build practical,
+            real-world products
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl mb-4 text-[var(--primary)]">What I'm Learning</h2>
+        <ul
+          class="list-disc list-inside space-y-2 text-[var(--dark)] leading-7"
+        >
+          <li>
+            Learning and implementing best practices for scalable architecture
+          </li>
+          <li>
+            Advanced <strong>React</strong> patterns and performance optimization
+          </li>
+          <li>
+            Server-side rendering and static site generation with <strong
+              >Astro</strong>
+          </li>
+          <!-- <li>Database design and optimization techniques</li> -->
+          <li>
+            AI-powered applications using <strong>Nextjs</strong> and the <strong
+              >Vercel AI SDK</strong>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl mb-4 text-[var(--primary)]">Current Focus</h2>
+        <p class="text-[var(--dark)] leading-7">
+          I'm currently focused on building AI-powered applications mainly using
+          <strong>Nextjs</strong> and the <strong>Vercel AI SDK</strong>. My
+          main goal is to create practical, real-world products that combine my
+          software engineering skills with modern AI capabilities.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl mb-4 text-[var(--primary)]">What's Next</h2>
+        <ul
+          class="list-disc list-inside space-y-2 text-[var(--dark)] leading-7"
+        >
+          <li>Continue expanding my portfolio with new projects</li>
+          <li>Write blog posts about my development journey and learnings</li>
+          <li>Contribute to open-source projects</li>
+          <li>Connect with other developers and share knowledge</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-[var(--light)]">
+      <p class="text-sm text-[var(--dark)] italic">
+        Inspired by <a
+          href="https://nownownow.com/about"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[var(--primary)] underline hover:text-[var(--dark)] transition-colors duration-200">nownownow.com</a
+        >
+      </p>
+    </div>
+  </Section>
+</Layout>
