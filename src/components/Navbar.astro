@@ -9,6 +9,10 @@ const navItems = [
   { text: 'Now', href: '/now' },
   { text: 'Contact', href: '/contact' },
 ];
+
+const currentPath = Astro.url.pathname;
+const activeClass = 'font-bold text-[var(--primary)] underline underline-offset-2';
+const hoverClass = 'font-bold hover:text-[var(--primary)]';
 ---
 
 <nav class="bg-[var(--secondary)]">
@@ -34,7 +38,9 @@ const navItems = [
             <li>
               <a
                 href={item.href}
-                class="no-underline text-[var(--dark)] text-lg"
+                class={`text-lg transition-colors duration-200 text-[var(--dark)] ${hoverClass}
+                  ${currentPath === item.href ? activeClass : ''}`}
+                aria-label={`Go to ${item.text} page`}
               >
                 {item.text}
               </a>
