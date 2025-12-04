@@ -1,6 +1,7 @@
 {
   "HTML": "html5",
   "CSS": "css",
+  "Sass": "sass",
   "JavaScript": "javascript",
   "TypeScript": "typescript",
   "React": "react",
@@ -50,7 +51,10 @@
   "Scikit-learn": "scikitlearn",
   "TensorFlow": "tensorflow",
   "PyTorch": "pytorch",
+  "LangChain": "langchain",
+  "Hugging Face": "huggingface",
   "Figma": "figma",
-  "Cinema 4D": "cinema4d"
+  "Cinema 4D": "cinema4d",
+  "Gradio": "gradio"
 }
 

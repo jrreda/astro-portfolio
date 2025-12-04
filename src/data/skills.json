@@ -2,9 +2,11 @@
   "Frontend": [
     "HTML",
     "CSS",
+    "Sass",
     "JavaScript",
     "TypeScript",
     "React",
+    "blades",
     "Vue.js",
     "Next.js",
     "Astro",
@@ -40,8 +42,8 @@
   "Tools": [
     "Git",
     "Docker",
-    "Kubernetes",
     "CI/CD",
+    "DevOps",
     "Linux",
     "macOS",
     "XAMPP",
@@ -71,12 +73,17 @@
     "Plotly",
     "Bokeh",
     "Tableau",
-    "Power BI"
+    "Power BI",
+    "Excel",
+    "Power Point",
+    "Gradio"
   ],
   "Machine Learning": [
     "Scikit-learn",
     "TensorFlow",
-    "PyTorch"
+    "PyTorch",
+    "LangChain",
+    "Hugging Face"
   ],
   "Design": [
     "Figma",

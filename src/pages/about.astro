@@ -1,0 +1,118 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import PageHeader from '../components/PageHeader.astro';
+import me from '/public/images/me.png';
+import ButtonLink from '../components/ButtonLink.astro';
+
+const heading = 'About Me 👋';
+const pageTitle = 'About - Reda - Full-Stack Developer';
+---
+
+<Layout title={pageTitle}>
+  <Section>
+    <PageHeader heading={heading} />
+
+    <div class="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8 items-start mb-12">
+      <div>
+        <Image
+          src={me}
+          alt="Reda - Full-Stack Developer"
+          width={300}
+          height={300}
+          loading="eager"
+          class="rounded-lg"
+        />
+      </div>
+      <div class="space-y-6">
+        <h2 class="text-2xl mb-4 text-[var(--primary)]">Hi, I'm Reda!</h2>
+          <p class="text-[var(--dark)] leading-7 mb-4">
+            I'm a Full-Stack Developer specializing in React, Next.js, and modern UI
+            engineering. I build fast, accessible, and scalable web applications with a
+            strong focus on clean architecture and great user experience. with a data science background.
+          </p>
+          <p class="text-[var(--dark)] leading-7">
+            Recently, I've been exploring the intersection of AI and full-stack development —
+            building intelligent, user-centric tools using the Vercel AI SDK and Next.js.
+            I love turning ideas into polished digital products and continuously learning
+            new techniques to level up my craft.
+          </p>
+
+        <div class="flex gap-2.5 max-[600px]:flex-col">
+          <ButtonLink href="/projects" text="View projects" variant="secondary" />
+          <ButtonLink
+            href="/resume.pdf"
+            text="Download resume"
+            isDownload={true}
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-8">
+      <section>
+        <h2 class="text-2xl mb-4 text-[var(--primary)]">What I Do</h2>
+        <p class="text-[var(--dark)] leading-7 mb-4">
+          As a full-stack developer, I work across the entire technology stack to
+          deliver end-to-end solutions. My expertise includes:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-[var(--dark)] leading-7">
+          <li>
+            <strong>Frontend Development:</strong> Building responsive, interactive
+            user interfaces with React, Next.js, Vue.js, and modern CSS frameworks
+          </li>
+          <li>
+            <strong>Backend Development:</strong> Creating robust server-side
+            applications with Node.js, Express, Django, and Laravel
+          </li>
+          <li>
+            <strong>Database Design:</strong> Designing and optimizing databases
+            using MySQL, PostgreSQL, MongoDB, and Redis
+          </li>
+          <li>
+            <strong>AI Integration:</strong> Building AI-powered applications using
+            Next.js and the Vercel AI SDK
+          </li>
+          <li>
+            <strong>DevOps & Deployment:</strong> Setting up CI/CD pipelines and
+            deploying applications to cloud platforms like AWS, Vercel, and Netlify
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl mb-4 text-[var(--primary)]">My Approach</h2>
+        <p class="text-[var(--dark)] leading-7">
+          I care deeply about writing maintainable code, choosing the right abstractions,
+          and shipping interfaces that feel smooth and intuitive. Whether I'm optimizing
+          performance, designing reusable components, or integrating complex APIs, I
+          approach each project with precision and attention to detail.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl mb-4 text-[var(--primary)]">Beyond Code</h2>
+        <p class="text-[var(--dark)] leading-7">
+          Outside of coding, I enjoy learning German, exploring data science concepts,
+          and staying active at the gym. I also like contributing to the developer
+          community, studying design patterns, and refining my craft through side projects.
+        </p>
+      </section>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-[var(--light)]">
+      <p class="text-[var(--dark)] leading-7">
+        Want to work together or have a question? Feel free to{' '}
+        <a
+          href="/contact"
+          class="text-[var(--primary)] underline hover:text-[var(--light)] transition-colors duration-200"
+        >
+          get in touch
+        </a>
+        !
+      </p>
+    </div>
+  </Section>
+</Layout>
+
