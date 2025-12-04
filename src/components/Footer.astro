@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Section from './Section.astro';
 
-const rightsText = 'Copyright © 2025 Reda All rights reserved';
+const rightsText = 'Copyright © 2025 Reda - All rights reserved';
 const creditText = 'Images: Flaticon.com';
 
 const socialMedia = [
@@ -23,12 +23,22 @@ const socialMedia = [
     href: 'https://linkedin.com/in/jrreda',
   },
 ];
+
+const footerLinks = [
+  { text: 'About', href: '/about' },
+  { text: 'Projects', href: '/projects' },
+  { text: 'Blog', href: '/blog' },
+  { text: 'Skills', href: '/skills' },
+  { text: 'Now', href: '/now' },
+  { text: 'Uses', href: '/uses' },
+  { text: 'Contact', href: '/contact' },
+];
 ---
 
 <!-- wrap with section component -->
 <Section dark>
-  <footer class="flex items-center flex-col">
-    <div class="flex gap-5 mb-5 items-center">
+  <footer class="flex flex-col items-center">
+    <div class="flex gap-5 mb-6 items-center">
       {
         socialMedia.map((icon) => (
           <a href={icon.href} target="_blank" rel="noopener noreferrer">
@@ -37,13 +47,33 @@ const socialMedia = [
               alt={icon.alt}
               width={32}
               height={32}
-              class="max-[500px]:h-[22px] max-[500px]:w-[22px]"
+              class="max-[500px]:h-[22px] max-[500px]:w-[22px] hover:scale-110 transition-transform duration-200 cursor-pointer"
             />
           </a>
         ))
       }
     </div>
-    <p>{rightsText}</p>
+
+    <nav class="mb-6">
+      <ul
+        class="list-none flex flex-wrap gap-4 justify-center max-[500px]:gap-3"
+      >
+        {
+          footerLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-[var(--dark)] text-sm no-underline hover:text-[var(--primary)] transition-colors duration-200"
+              >
+                {link.text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <p class="text-[12px]">{rightsText}</p>
     <!-- <p class="text-[var(--light)] mt-2 text-sm">{creditText}</p> -->
   </footer>
 </Section>
