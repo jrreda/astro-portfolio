@@ -25,12 +25,16 @@ const { project, loading = 'lazy' } = Astro.props;
     <h3 class="text-[30px] font-semibold mb-5">{project.data.title}</h3>
     <p class="mb-10">{project.data.description}</p>
     <div class="flex gap-2.5 mt-2.5 max-[600px]:flex-col">
-      <ButtonLink
-        href={`${project.data.githubURL}`}
-        text="View on Github"
-        variant="secondary"
-      />
-      <ButtonLink href={`${project.data.liveSiteURL}`} text="View Live" />
+      {project.data.githubURL && (
+        <ButtonLink
+          href={`${project.data.githubURL}`}
+          text="View on Github"
+          variant="secondary"
+        />
+      )}
+      {project.data.liveSiteURL && (
+        <ButtonLink href={`${project.data.liveSiteURL}`} text="View Live" />
+      )}
     </div>
   </div>
 </div>
