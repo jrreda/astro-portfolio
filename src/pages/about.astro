@@ -3,11 +3,11 @@ import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
 import PageHeader from '../components/PageHeader.astro';
-import me from '/public/images/me.png';
+import me from '/public/images/me.jpg';
 import ButtonLink from '../components/ButtonLink.astro';
 
 const heading = 'About Me';
-const pageTitle = 'About - Reda - Full-Stack Developer';
+const pageTitle = 'About - Reda - Frontend Developer';
 ---
 
 <Layout title={pageTitle}>
@@ -18,7 +18,7 @@ const pageTitle = 'About - Reda - Full-Stack Developer';
       <div>
         <Image
           src={me}
-          alt="Reda - Full-Stack Developer"
+          alt="Reda - Frontend Developer"
           width={300}
           height={300}
           loading="eager"
@@ -28,25 +28,25 @@ const pageTitle = 'About - Reda - Full-Stack Developer';
       <div class="space-y-6">
         <h2 class="text-2xl mb-4 text-[var(--primary)]">Hi, I'm Reda!</h2>
           <p class="text-[var(--dark)] leading-7 mb-4">
-            I'm a Full-Stack Developer specializing in React, Next.js, and modern UI
+            I'm a Frontend Developer specializing in React, Next.js, and modern UI
             engineering. I build fast, accessible, and scalable web applications with a
             strong focus on clean architecture and great user experience. with a data science background.
           </p>
           <p class="text-[var(--dark)] leading-7">
-            Recently, I've been exploring the intersection of AI and full-stack development —
+            Recently, I've been exploring the intersection of AI and frontend development —
             building intelligent, user-centric tools using the Vercel AI SDK and Next.js.
             I love turning ideas into polished digital products and continuously learning
             new techniques to level up my craft.
           </p>
 
-        <div class="flex gap-2.5 max-[600px]:flex-col">
+        <!-- <div class="flex gap-2.5 max-[600px]:flex-col">
           <ButtonLink href="/projects" text="View projects" variant="secondary" />
           <ButtonLink
             href="/resume.pdf"
             text="Download resume"
             isDownload={true}
           />
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -54,7 +54,7 @@ const pageTitle = 'About - Reda - Full-Stack Developer';
       <section>
         <h2 class="text-2xl mb-4 text-[var(--primary)]">What I Do</h2>
         <p class="text-[var(--dark)] leading-7 mb-4">
-          As a full-stack developer, I work across the entire technology stack to
+          As a frontend developer, I work across the entire technology stack to
           deliver end-to-end solutions. My expertise includes:
         </p>
         <ul class="list-disc list-inside space-y-2 text-[var(--dark)] leading-7">
