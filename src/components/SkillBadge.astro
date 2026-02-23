@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import skillIcons from '../data/skill-icons.json';
 interface Props {
   skill: string;
@@ -13,7 +14,7 @@ const iconId = skillIcons[skill] || null;
   title={skill}
 >
   {iconId && (
-    <img
+    <Image
       src={`https://cdn.simpleicons.org/${iconId}`}
       alt={skill}
       width={20}
