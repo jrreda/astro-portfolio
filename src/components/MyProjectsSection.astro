@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Section from './Section.astro';
 import SectionHeader from './SectionHeader.astro';
 import { getCollection } from 'astro:content';
+import SkillBadge from './SkillBadge.astro';
 
 const heading = 'My Projects';
 const cta = { text: 'View All', href: '/projects' };
@@ -31,11 +32,12 @@ const projects = await getCollection('project');
               {project.data.title}
             </a>
           </h3>
-          {/* <p>{project.data.description}</p>
-          <div class="cta-container">
-            <a href={project.data.githubURL}>GitHub</a>
-            <a href={project.data.liveSiteURL}>Live Site</a>
-          </div> */}
+          <p class="my-2 text-sm font-medium leading-tight">{project.data.description.slice(0, 30)}...</p>
+          <div class="flex flex-wrap gap-2">
+            {project.data.techStack.slice(0, 3).map((tech) => (
+              <SkillBadge skill={tech} />
+            ))}
+          </div>
         </div>
       ))
     }
