@@ -3,12 +3,14 @@ import Container from './Container.astro';
 
 interface Props {
   dark?: boolean;
+  id?: string;
 }
 
-const { dark = false } = Astro.props;
+const { dark = false, id } = Astro.props;
 ---
 
 <section
+  id={id}
   class={`py-20 max-[1000px]:py-10 ${dark ? 'bg-[var(--secondary)]' : ''}`}
 >
   <Container>

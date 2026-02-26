@@ -3,6 +3,7 @@
     "title": "HH Shaker",
     "slug": "hh-shaker",
     "description": "A corporate website with dynamic company profiles, a filterable product catalog, and interactive contact forms",
+    "techStack": ["Laravel", "MySQL", "Bootstrap", "JavaScript", "HTML", "CSS"],
     "image": "/images/projects/project-1.png",
     "githubURL": "",
     "liveSiteURL": "https://www.hh-shaker.com.sa"
@@ -12,6 +13,7 @@
     "slug": "okan-accessories",
     "description":
       "A modern E-commerce website Built with Next.js page router, SASS, and Framer Motion.",
+    "techStack": ["Next.js", "Sass", "Framer Motion", "React Form Hook", "Context API", "React Icons"],
     "image": "/images/projects/project-2.png",
     "githubURL": "",
     "liveSiteURL": "https://okanaccessories.shop"
@@ -21,6 +23,7 @@
     "slug": "balaniia",
     "description":
       "A bespoke wordpress E-commerce website aligned with luxury brand design standards",
+    "techStack": ["WordPress", "woocommerce"],
     "image": "/images/projects/project-3.png",
     "githubURL": "",
     "liveSiteURL": "https://balanciia.com/"

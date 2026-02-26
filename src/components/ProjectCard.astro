@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import ButtonLink from './ButtonLink.astro';
+import SkillBadge from './SkillBadge.astro';
 
 interface Props {
   project: CollectionEntry<'project'>;
@@ -23,7 +24,16 @@ const { project, loading = 'lazy' } = Astro.props;
 
   <div>
     <h3 class="text-[30px] font-semibold mb-5">{project.data.title}</h3>
-    <p class="mb-10">{project.data.description}</p>
+    <p class="mb-6">{project.data.description}</p>
+
+    {project.data.techStack && project.data.techStack.length > 0 && (
+      <div class="flex flex-wrap gap-2 mb-6">
+        {project.data.techStack.map((tech) => (
+          <SkillBadge skill={tech} />
+        ))}
+      </div>
+    )}
+
     <div class="flex gap-2.5 mt-2.5 max-[600px]:flex-col">
       {project.data.githubURL && (
         <ButtonLink

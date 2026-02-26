@@ -4,9 +4,10 @@ interface Props {
   text: string;
   variant?: 'primary' | 'secondary';
   isDownload?: boolean;
+  class?: string;
 }
 
-const { href, text, variant = 'primary', isDownload } = Astro.props;
+const { href, text, variant = 'primary', isDownload, class: className } = Astro.props;
 ---
 
 {
@@ -14,7 +15,7 @@ const { href, text, variant = 'primary', isDownload } = Astro.props;
     <a
       href={href}
       download
-      class={`px-8 py-3.5 block w-[230px] text-center no-underline text-lg transition-all duration-300 ease-in-out ${
+      class={`px-8 py-3.5 block w-[230px] text-center no-underline text-lg transition-all duration-300 ease-in-out ${className} ${
         variant === 'primary'
           ? 'bg-[var(--primary)] text-white hover:bg-white hover:text-[var(--primary)] hover:border hover:border-[var(--primary)]'
           : 'bg-white text-[var(--primary)] border border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white'
@@ -29,7 +30,7 @@ const { href, text, variant = 'primary', isDownload } = Astro.props;
   !isDownload && (
     <a
       href={href}
-      class={`px-8 py-3.5 block w-[230px] text-center no-underline text-lg transition-all duration-300 ease-in-out ${
+      class={`px-8 py-3.5 block w-[230px] text-center no-underline text-lg transition-all duration-300 ease-in-out ${className} ${
         variant === 'primary'
           ? 'bg-[var(--primary)] text-white hover:bg-white hover:text-[var(--primary)] hover:border hover:border-[var(--primary)]'
           : 'bg-white text-[var(--primary)] border border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white'
