@@ -6,6 +6,8 @@
   --primary: #2f7d32;
   --primary-dark: #174f2a;
   --accent: #9bcf53;
+  --sky: #8ecae6;
+  --sky-soft: #e8f6ff;
   --secondary: #f4faef;
   --white: #ffffff;
   --dark: #102018;
@@ -30,8 +32,9 @@ body {
   color: var(--dark);
   background:
     radial-gradient(circle at 12% 8%, rgba(155, 207, 83, 0.28), transparent 28rem),
-    radial-gradient(circle at 88% 14%, rgba(47, 125, 50, 0.18), transparent 26rem),
-    linear-gradient(180deg, #fbfff8 0%, #f3faed 52%, #ffffff 100%);
+    radial-gradient(circle at 88% 10%, rgba(142, 202, 230, 0.32), transparent 27rem),
+    radial-gradient(circle at 88% 36%, rgba(47, 125, 50, 0.14), transparent 24rem),
+    linear-gradient(180deg, #fbfff8 0%, #f2fbf4 46%, var(--sky-soft) 100%);
   overflow-x: hidden;
 }
 
@@ -43,7 +46,7 @@ body::before {
   pointer-events: none;
   background-image:
     linear-gradient(rgba(47, 125, 50, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(47, 125, 50, 0.07) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(142, 202, 230, 0.09) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), transparent 70%);
 }
@@ -79,7 +82,7 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid rgba(155, 207, 83, 0.6);
+  outline: 3px solid rgba(142, 202, 230, 0.75);
   outline-offset: 4px;
 }
 
@@ -98,7 +101,7 @@ button:focus-visible {
 
 .gradient-text {
   color: transparent;
-  background: linear-gradient(120deg, var(--primary), var(--accent));
+  background: linear-gradient(120deg, var(--primary) 0%, var(--accent) 48%, var(--sky) 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -125,5 +128,7 @@ button:focus-visible {
   height: 0.5rem;
   border-radius: 999px;
   background: var(--accent);
-  box-shadow: 0 0 0 6px rgba(155, 207, 83, 0.18);
+  box-shadow:
+    0 0 0 6px rgba(155, 207, 83, 0.16),
+    0 0 24px rgba(142, 202, 230, 0.45);
 }
