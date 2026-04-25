@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --primary: #635bff;
-  --primary-dark: #3f36d7;
-  --accent: #00d5ff;
-  --secondary: #f4f7ff;
+  --primary: #2f7d32;
+  --primary-dark: #174f2a;
+  --accent: #9bcf53;
+  --secondary: #f4faef;
   --white: #ffffff;
-  --dark: #111827;
-  --muted: #536179;
-  --light: #d9e2f2;
+  --dark: #102018;
+  --muted: #526557;
+  --light: #d8e7d2;
   --surface: rgba(255, 255, 255, 0.78);
   --surface-strong: rgba(255, 255, 255, 0.94);
-  --border: rgba(99, 91, 255, 0.14);
-  --shadow: 0 24px 70px rgba(17, 24, 39, 0.12);
+  --border: rgba(47, 125, 50, 0.16);
+  --shadow: 0 24px 70px rgba(16, 32, 24, 0.12);
   --random: #f7f7f7;
 }
 
@@ -29,9 +29,9 @@ body {
   min-height: 100vh;
   color: var(--dark);
   background:
-    radial-gradient(circle at 12% 8%, rgba(99, 91, 255, 0.18), transparent 28rem),
-    radial-gradient(circle at 88% 14%, rgba(0, 213, 255, 0.2), transparent 26rem),
-    linear-gradient(180deg, #fbfdff 0%, #f6f8ff 52%, #ffffff 100%);
+    radial-gradient(circle at 12% 8%, rgba(155, 207, 83, 0.28), transparent 28rem),
+    radial-gradient(circle at 88% 14%, rgba(47, 125, 50, 0.18), transparent 26rem),
+    linear-gradient(180deg, #fbfff8 0%, #f3faed 52%, #ffffff 100%);
   overflow-x: hidden;
 }
 
@@ -42,8 +42,8 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(99, 91, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 91, 255, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(47, 125, 50, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47, 125, 50, 0.07) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), transparent 70%);
 }
@@ -79,7 +79,7 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid rgba(0, 213, 255, 0.55);
+  outline: 3px solid rgba(155, 207, 83, 0.6);
   outline-offset: 4px;
 }
 
@@ -91,9 +91,9 @@ button:focus-visible {
 }
 
 .surface-card-soft {
-  border: 1px solid rgba(99, 91, 255, 0.1);
+  border: 1px solid rgba(47, 125, 50, 0.12);
   background: rgba(255, 255, 255, 0.66);
-  box-shadow: 0 16px 42px rgba(17, 24, 39, 0.08);
+  box-shadow: 0 16px 42px rgba(16, 32, 24, 0.08);
 }
 
 .gradient-text {
@@ -108,7 +108,7 @@ button:focus-visible {
   align-items: center;
   gap: 0.5rem;
   width: fit-content;
-  border: 1px solid rgba(99, 91, 255, 0.18);
+  border: 1px solid rgba(47, 125, 50, 0.2);
   border-radius: 999px;
   padding: 0.45rem 0.8rem;
   color: var(--primary-dark);
@@ -125,5 +125,5 @@ button:focus-visible {
   height: 0.5rem;
   border-radius: 999px;
   background: var(--accent);
-  box-shadow: 0 0 0 6px rgba(0, 213, 255, 0.14);
+  box-shadow: 0 0 0 6px rgba(155, 207, 83, 0.18);
 }
