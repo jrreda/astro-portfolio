@@ -6,13 +6,16 @@ const email = 'jrreda.dev@gmail.com';
 ---
 
 <Section id="contact">
-  <div class="text-center max-w-xl mx-auto">
-    <h2 class="text-3xl font-bold mb-3 text-[var(--dark)]">
+  <div class="surface-card relative mx-auto max-w-3xl overflow-hidden rounded-[2rem] p-10 text-center">
+    <div class="absolute left-1/2 top-0 h-32 w-72 -translate-x-1/2 rounded-full bg-[var(--accent)]/20 blur-3xl"></div>
+    <p class="eyebrow mx-auto mb-4">Available for work</p>
+    <h2 class="relative text-4xl font-black tracking-[-0.04em] mb-3 text-[var(--dark)] max-[600px]:text-3xl">
       Get in touch
     </h2>
-    <p class="text-[var(--dark)] leading-7 mb-8">
-      Have a project in mind or want to say hi? I'd love to hear from you.
+    <p class="relative mx-auto max-w-xl text-[var(--muted)] leading-7 mb-8">
+      Have a product idea, frontend challenge, or design that needs to become a
+      fast interface? I'd love to hear from you.
     </p>
-    <ButtonLink href={`mailto:${email}`} text="Contact me" class="mx-auto" />
+    <ButtonLink href={`mailto:${email}`} text="Contact me" class="mx-auto relative" />
   </div>
 </Section>

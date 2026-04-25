@@ -5,6 +5,80 @@ import PageHeader from '../components/PageHeader.astro';
 
 const heading = 'Uses';
 const pageTitle = 'Uses - Tools & Setup - Reda';
+
+const toolSections = [
+  {
+    title: 'Development Tools',
+    summary: 'The daily workflow for coding, debugging, version control, and APIs.',
+    items: [
+      ['Editor', 'Cursor (AI-powered code editor)'],
+      ['Terminal', 'Warp'],
+      ['Version Control', 'Git with GitHub & GitLab'],
+      ['Package Manager', 'pnpm, npm'],
+      ['API Testing', 'Postman'],
+      ['Database Tools', 'TablePlus, MySQL Workbench, phpMyAdmin'],
+    ],
+  },
+  {
+    title: 'Design & Productivity',
+    summary: 'Tools that help me shape ideas, collaborate, and keep projects moving.',
+    items: [
+      ['Design', 'Figma, Adobe XD'],
+      ['Note Taking', 'Notion, Obsidian, Google Keep'],
+      ['Task Management', 'Jira, GitHub Projects'],
+      ['Communication', 'Slack'],
+    ],
+  },
+  {
+    title: 'Development Stack',
+    summary: 'The technologies I reach for when building modern product interfaces.',
+    items: [
+      ['Frontend', 'React, Next.js, Astro, Vue.js, TypeScript'],
+      ['Styling', 'Tailwind CSS, shadcn/ui, Styled Components, CSS Modules'],
+      ['Backend', 'Node.js, Express, Laravel, Django'],
+      ['Databases', 'PostgreSQL, MySQL, MongoDB, Redis, Supabase'],
+      ['Deployment', 'Vercel, Netlify, Docker'],
+      ['CI/CD', 'GitHub Actions, GitLab CI/CD'],
+    ],
+  },
+  {
+    title: 'Hardware',
+    summary: 'A compact setup for focused frontend work and testing across screens.',
+    items: [
+      ['Computer', 'MacBook Pro (M1 Pro)'],
+      ['Monitor', 'External monitor for extended workspace (27 inch)'],
+      ['Keyboard', 'Apple Magic Keyboard'],
+      ['Mouse', 'Logitech G502 Hero'],
+    ],
+  },
+  {
+    title: 'Browser & Extensions',
+    summary: 'The inspection and quality tools I use to refine UI behavior.',
+    items: [
+      ['Browser', 'Chrome, Firefox, Zen Browser'],
+      ['Extensions', 'React DevTools, Vue DevTools, Lighthouse, ColorZilla, JSON Formatter, CORS Unblocker'],
+    ],
+  },
+  {
+    title: 'Services & Platforms',
+    summary: 'Hosted services for shipping, analytics, cloud features, and email.',
+    items: [
+      ['Hosting', 'Vercel, Netlify'],
+      ['Cloud', 'AWS, Firebase, Supabase'],
+      ['Analytics', 'Google Analytics, Vercel Analytics'],
+      ['Email', 'Gmail'],
+    ],
+  },
+  {
+    title: 'Learning & Resources',
+    summary: 'Reference material and learning loops that keep the craft sharp.',
+    items: [
+      ['Documentation', 'MDN, official framework docs, Stack Overflow'],
+      ['Courses', 'Scrimba, freeCodeCamp, Udemy, Laracasts, Frontend Mentor'],
+      ['Communities', 'Reddit, LinkedIn'],
+    ],
+  },
+];
 ---
 
 <Layout title={pageTitle}>
@@ -18,146 +92,45 @@ const pageTitle = 'Uses - Tools & Setup - Reda';
       </span>
     </PageHeader>
 
-    <div class="space-y-8">
-      <section>
-        <h2 class="text-2xl mb-4 text-[var(--primary)]">Development Tools</h2>
-        <ul class="list-none space-y-3 text-[var(--dark)] leading-7">
-          <li>
-            <strong>Editor:</strong> Cursor (AI-powered code editor)
-          </li>
-          <li>
-            <strong>Terminal:</strong> Warp
-          </li>
-          <li>
-            <strong>Version Control:</strong> Git with GitHub & GitLab
-          </li>
-          <li>
-            <strong>Package Manager:</strong> pnpm, npm
-          </li>
-          <li>
-            <strong>API Testing:</strong> Postman
-          </li>
-          <li>
-            <strong>Database Tools:</strong> TablePlus, MySQL Workbench, phpMyAdmin
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-2xl mb-4 text-[var(--primary)]">Design & Productivity</h2>
-        <ul class="list-none space-y-3 text-[var(--dark)] leading-7">
-          <li>
-            <strong>Design:</strong> Figma, Adobe XD
-          </li>
-          <li>
-            <strong>Note Taking:</strong> Notion, Obsidian, Google Keep
-          </li>
-          <li>
-            <strong>Task Management:</strong> Jira, GitHub Projects
-          </li>
-          <li>
-            <strong>Communication:</strong> Slack
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-2xl mb-4 text-[var(--primary)]">Development Stack</h2>
-        <ul class="list-none space-y-3 text-[var(--dark)] leading-7">
-          <li>
-            <strong>Frontend:</strong> React, Next.js, Astro, Vue.js, TypeScript
-          </li>
-          <li>
-            <strong>Styling:</strong> Tailwind CSS, shadcn/ui, Styled Components, CSS Modules
-          </li>
-          <li>
-            <strong>Backend:</strong> Node.js, Express, Laravel, Django
-          </li>
-          <li>
-            <strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, Redis, Supabase
-          </li>
-          <li>
-            <strong>Deployment:</strong> Vercel, Netlify, Docker
-          </li>
-          <li>
-            <strong>CI/CD:</strong> GitHub Actions
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-2xl mb-4 text-[var(--primary)]">Hardware</h2>
-        <ul class="list-none space-y-3 text-[var(--dark)] leading-7">
-          <li>
-            <strong>Computer:</strong> MacBook Pro (M1 Pro)
-          </li>
-          <li>
-            <strong>Monitor:</strong> External monitor for extended workspace (27 inch)
-          </li>
-          <li>
-            <strong>Keyboard:</strong> Apple Magic Keyboard
-          </li>
-          <li>
-            <strong>Mouse:</strong> Logitech G502 Hero
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-2xl mb-4 text-[var(--primary)]">Browser & Extensions</h2>
-        <ul class="list-none space-y-3 text-[var(--dark)] leading-7">
-          <li>
-            <strong>Browser:</strong> Chrome, Firefox, Zen Browser
-          </li>
-          <li>
-            <strong>Extensions:</strong> React DevTools, Vue DevTools, Lighthouse,
-            ColorZilla, JSON Formatter, CORS Unblocker
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-2xl mb-4 text-[var(--primary)]">Services & Platforms</h2>
-        <ul class="list-none space-y-3 text-[var(--dark)] leading-7">
-          <li>
-            <strong>Hosting:</strong> Vercel, Netlify
-          </li>
-          <li>
-            <strong>Cloud:</strong> AWS, Firebase, Supabase
-          </li>
-          <li>
-            <strong>Analytics:</strong> Google Analytics, Vercel Analytics
-          </li>
-          <li>
-            <strong>Email:</strong> Gmail
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-2xl mb-4 text-[var(--primary)]">Learning & Resources</h2>
-        <ul class="list-none space-y-3 text-[var(--dark)] leading-7">
-          <li>
-            <strong>Documentation:</strong> MDN, official framework docs, Stack Overflow
-          </li>
-          <li>
-            <strong>Courses:</strong> Scrimba, freeCodeCamp, Udemy, Laracasts, Frontend Mentor
-          </li>
-          <li>
-            <strong>Communities:</strong> Reddit, LinkedIn
-          </li>
-        </ul>
-      </section>
+    <div class="gap-6 grid grid-cols-1 lg:grid-cols-2">
+      {
+        toolSections.map((section, index) => (
+          <section class={`surface-card-soft rounded-[1.75rem] p-6 ${index === 2 ? 'lg:col-span-2' : ''}`}>
+            <div class="flex justify-between items-start gap-4 mb-6">
+              <div>
+                <p class="mb-2 font-black text-[var(--primary)] text-xs uppercase tracking-[0.22em]">
+                  Setup {String(index + 1).padStart(2, '0')}
+                </p>
+                <h2 class="font-black text-[var(--dark)] text-2xl tracking-[-0.03em]">
+                  {section.title}
+                </h2>
+              </div>
+              <span class="bg-white px-3 py-1 border border-[var(--border)] rounded-full font-bold text-[var(--muted)] text-xs">
+                {section.items.length} tools
+              </span>
+            </div>
+            <p class="mb-6 text-[var(--muted)] leading-7">{section.summary}</p>
+            <ul class="gap-3 grid md:grid-cols-2 list-none">
+              {section.items.map(([label, value]) => (
+                <li class="bg-white/70 p-4 border border-[var(--border)] rounded-2xl">
+                  <strong class="block mb-1 text-[var(--dark)] text-sm">{label}</strong>
+                  <span class="text-[var(--muted)] text-sm leading-6">{value}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
+      }
     </div>
 
-    <div class="mt-12 pt-8 border-t border-[var(--light)]">
-      <p class="text-sm text-[var(--dark)] italic">
+    <div class="mt-12 p-6 rounded-[1.5rem] surface-card-soft">
+      <p class="text-[var(--muted)] text-sm">
         Inspired by{' '}
         <a
           href="https://uses.tech"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-[var(--primary)] underline hover:text-[var(--dark)] transition-colors duration-200"
+          class="font-bold text-[var(--primary)] hover:text-[var(--dark)] decoration-[var(--accent)] underline underline-offset-4 transition-colors duration-200"
         >
           uses.tech
         </a>

@@ -7,19 +7,19 @@ import Container from './Container.astro';
 
 <Container>
   <header
-    class="grid grid-cols-[540px_1fr] justify-items-center gap-20 items-center my-20 max-[1000px]:grid-cols-1 max-[1000px]:grid-rows-auto max-[1000px]:gap-10"
+    class="relative justify-items-center items-center gap-16 max-[1000px]:gap-10 grid grid-cols-[minmax(0,1.1fr)_380px] max-[1000px]:grid-cols-1 max-[1000px]:grid-rows-auto py-24 max-[700px]:py-14"
   >
-    <div>
-      <h1 class="text-[44px] flex flex-col mb-5">
-        Hi. I am Reda. <span class="text-[var(--primary)]">Frontend</span> Developer!
+    <div class="z-10 relative">
+      <p class="mb-5 eyebrow">Frontend Engineer</p>
+      <h1 class="mb-6 max-w-3xl font-black max-[480px]:text-4xl max-[700px]:text-5xl text-6xl leading-[0.95] tracking-[-0.05em]">
+        I build polished interfaces with <span class="gradient-text">React</span> and Next.js.
       </h1>
-      <p class="leading-7 text-[var(--dark)] mb-[30px]">
-        I'm a Frontend Developer specializing in React.js, Next.js, Node.js,
-        and database management. I build scalable, high-performance web
-        applications, robust back-end architecture, and efficient API
-        integrations.
+      <p class="mb-8 max-w-2xl text-[var(--muted)] text-lg leading-8">
+        I'm Reda, a frontend developer focused on fast, accessible, and
+        carefully crafted web apps. I turn product ideas into interfaces that
+        feel sharp, responsive, and easy to use.
       </p>
-      <div class="flex gap-2.5 max-[600px]:flex-col">
+      <div class="flex max-[600px]:flex-col gap-3 mb-8">
         <ButtonLink href="/projects" text="View projects" variant="secondary" />
         <ButtonLink
           href="/resume.pdf"
@@ -27,14 +27,40 @@ import Container from './Container.astro';
           isDownload={true}
         />
       </div>
+      <div class="gap-3 grid grid-cols-3 max-[600px]:grid-cols-1 max-w-xl">
+        <div class="p-4 rounded-2xl surface-card-soft">
+          <span class="block font-black text-[var(--dark)] text-2xl">React</span>
+          <span class="text-[var(--muted)] text-sm">component systems</span>
+        </div>
+        <div class="p-4 rounded-2xl surface-card-soft">
+          <span class="block font-black text-[var(--dark)] text-2xl">Next.js</span>
+          <span class="text-[var(--muted)] text-sm">full-stack UI</span>
+        </div>
+        <!-- <div class="p-4 rounded-2xl surface-card-soft">
+          <span class="block font-black text-[var(--dark)] text-2xl">Astro</span>
+          <span class="text-[var(--muted)] text-sm">fast content sites</span>
+        </div> -->
+      </div>
     </div>
-    <Image
-      src={me}
-      alt="Me"
-      width={300}
-      height={300}
-      loading="eager"
-      class="max-[1000px]:row-start-1 rounded-xl"
-    />
+    <div class="relative max-[1000px]:row-start-1 p-8 rounded-[2rem] surface-card">
+      <Image
+        src={me}
+        alt="Reda"
+        width={320}
+        height={320}
+        loading="eager"
+        class="z-10 relative shadow-2xl shadow-slate-900/15 rounded-[1.5rem] object-cover"
+      />
+      <div class="z-10 relative bg-white/85 shadow-slate-900/10 shadow-xl backdrop-blur -mt-10 mr-5 ml-5 p-4 border border-white/70 rounded-2xl">
+        <div class="flex gap-1.5 mb-2">
+          <span class="bg-red-400 rounded-full size-2.5"></span>
+          <span class="bg-amber-400 rounded-full size-2.5"></span>
+          <span class="bg-emerald-400 rounded-full size-2.5"></span>
+        </div>
+        <code class="font-semibold text-[var(--dark)] text-sm">
+          ship(&#123; detail: 'pixel-perfect', speed: 'fast' &#125;)
+        </code>
+      </div>
+    </div>
   </header>
 </Container>

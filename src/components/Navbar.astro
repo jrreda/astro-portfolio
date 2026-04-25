@@ -12,25 +12,27 @@ const navItems = [
 
 const currentPath = Astro.url.pathname;
 const activeClass =
-  "font-bold text-[var(--primary)] underline underline-offset-2";
-const hoverClass = "font-bold hover:text-[var(--primary)]";
+  "text-[var(--primary)] bg-white shadow-sm";
+const hoverClass = "hover:text-[var(--primary)] hover:bg-white/70";
 ---
 
-<nav class="bg-[var(--secondary)]">
+<nav class="top-0 z-50 sticky bg-white/75 backdrop-blur-xl border-[var(--border)] border-b">
   <Container>
     <div
-      class="flex py-6 justify-between items-center max-[500px]:flex-col max-[500px]:gap-4"
+      class="flex max-[640px]:flex-col justify-between items-center max-[640px]:gap-4 py-4"
     >
       <div>
-        <a href="/" class="text-2xl font-bold text-[var(--primary)]">Home</a>
+        <a href="/" class="group inline-flex items-center gap-2 font-bold text-lg">
+          <span class="gradient-text">Reda.dev</span>
+        </a>
       </div>
-      <ul class="list-none flex gap-6">
+      <ul class="flex flex-wrap justify-center gap-2 list-none">
         {
           navItems.map((item) => (
             <li>
               <a
                 href={item.href}
-                class={`text-lg transition-colors duration-200 text-[var(--dark)] ${hoverClass}
+                class={`rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200 text-[var(--dark)] ${hoverClass}
                   ${currentPath === item.href ? activeClass : ""}`}
                 aria-label={`Go to ${item.text} page`}
               >

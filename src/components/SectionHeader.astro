@@ -10,10 +10,13 @@ interface Props {
 const { heading, cta } = Astro.props;
 ---
 
-<div class="flex justify-between items-center mb-[60px]">
-  <h2 class="m-0 text-[32px] font-semibold">{heading}</h2>
+<div class="flex justify-between items-end gap-6 mb-[60px] max-[600px]:flex-col max-[600px]:items-start">
+  <div>
+    <p class="eyebrow mb-3">Explore</p>
+    <h2 class="m-0 text-[40px] font-black tracking-[-0.04em] max-[600px]:text-3xl">{heading}</h2>
+  </div>
   <a
     href={cta.href}
-    class="text-base no-underline font-normal text-[var(--dark)] hover:text-[var(--primary)] transition duration-100 hover:underline">{cta.text}</a
+    class="rounded-full border border-[var(--border)] bg-white/80 px-5 py-2 text-sm no-underline font-bold text-[var(--primary)] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[var(--primary)] hover:text-white">{cta.text}</a
   >
 </div>

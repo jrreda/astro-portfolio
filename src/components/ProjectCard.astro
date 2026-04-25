@@ -12,19 +12,21 @@ interface Props {
 const { project, loading = 'lazy' } = Astro.props;
 ---
 
-<div class="overflow-hidden flex gap-10 max-[800px]:flex-col">
-  <Image
-    src={project.data.image}
-    alt={project.data.title}
-    width={200}
-    height={200}
-    loading={loading}
-    class="h-[200px] w-[200px] object-cover max-[800px]:self-center"
-  />
+<div class="surface-card-soft group flex gap-8 overflow-hidden rounded-[2rem] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/10 max-[800px]:flex-col">
+  <div class="overflow-hidden rounded-[1.5rem] bg-[var(--secondary)] max-[800px]:self-center">
+    <Image
+      src={project.data.image}
+      alt={project.data.title}
+      width={240}
+      height={220}
+      loading={loading}
+      class="h-[220px] w-[240px] object-cover transition-transform duration-500 group-hover:scale-105 max-[800px]:w-full"
+    />
+  </div>
 
-  <div>
-    <h3 class="text-[30px] font-semibold mb-5">{project.data.title}</h3>
-    <p class="mb-6">{project.data.description}</p>
+  <div class="py-2">
+    <h3 class="text-[30px] font-black tracking-[-0.03em] mb-4">{project.data.title}</h3>
+    <p class="mb-6 leading-7 text-[var(--muted)]">{project.data.description}</p>
 
     {project.data.techStack && project.data.techStack.length > 0 && (
       <div class="flex flex-wrap gap-2 mb-6">

@@ -10,7 +10,7 @@ const iconId = skillIcons[skill] || null;
 ---
 
 <div
-  class="flex items-center gap-2 px-3 py-2 rounded-lg bg-[var(--secondary)] hover:bg-[var(--primary)] transition-colors duration-200 group cursor-default"
+  class="group/badge flex cursor-default items-center gap-2 rounded-full border border-[var(--border)] bg-white/80 px-3.5 py-2 shadow-sm shadow-slate-900/5 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--primary)] hover:bg-[var(--dark)]"
   title={skill}
 >
   {iconId && (
@@ -19,10 +19,10 @@ const iconId = skillIcons[skill] || null;
       alt={skill}
       width={20}
       height={20}
-      class="group-hover:brightness-0 group-hover:invert transition-all duration-200"
+      class="transition-all duration-200 group-hover/badge:brightness-0 group-hover/badge:invert"
     />
   )}
-  <span class="text-sm font-medium text-[var(--dark)] group-hover:text-white transition-colors duration-200">
+  <span class="text-sm font-semibold text-[var(--dark)] transition-colors duration-200 group-hover/badge:text-white">
     {skill}
   </span>
 </div>
