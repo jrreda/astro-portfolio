@@ -27,5 +27,15 @@
     "image": "/images/projects/project-3.png",
     "githubURL": "",
     "liveSiteURL": "https://balanciia.com/"
+  },
+  {
+    "title": "MacroZone",
+    "slug": "macrozone",
+    "description":
+      "A React Native app for tracking daily calories and macronutrients—log meals, see progress toward goals on the home dashboard, share or copy summaries, and optional meal reminders via local notifications.",
+    "techStack": ["Expo", "React Native", "TypeScript", "AsyncStorage", "Expo Notifications", "Expo Router"],
+    "image": "/images/projects/macrozone.png",
+    "githubURL": "https://github.com/jrreda/macrozone",
+    "liveSiteURL": ""
   }
 ]

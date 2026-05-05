@@ -29,12 +29,16 @@ const projects = await getCollection('project');
           </div>
           <div class="p-3">
           <h3 class="mt-3">
-            <a
-              href={project.data.liveSiteURL}
-              class="font-bold text-[var(--dark)] hover:text-[var(--primary)] text-xl no-underline transition-colors"
-            >
-              {project.data.title}
-            </a>
+            {project.data.liveSiteURL ? (
+              <a
+                href={project.data.liveSiteURL}
+                class="font-bold text-[var(--dark)] hover:text-[var(--primary)] text-xl no-underline transition-colors"
+              >
+                {project.data.title}
+              </a>
+            ) : (
+              <span class="font-bold text-[var(--dark)] text-xl">{project.data.title}</span>
+            )}
           </h3>
           <p class="my-3 font-medium text-[var(--muted)] text-sm leading-6">{project.data.description.slice(0, 82)}...</p>
           <div class="flex flex-wrap gap-2">
