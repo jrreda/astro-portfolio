@@ -12,8 +12,8 @@ interface Props {
 const { project, loading = 'lazy' } = Astro.props;
 ---
 
-<div class="surface-card-soft group flex gap-8 overflow-hidden rounded-[2rem] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/10 max-[800px]:flex-col">
-  <div class="overflow-hidden rounded-[1.5rem] bg-[var(--secondary)] max-[800px]:self-center">
+<div class="surface-card-soft group flex gap-8 overflow-hidden rounded-[2rem] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-2xl hover:shadow-black/30 max-[800px]:flex-col">
+  <div class="overflow-hidden rounded-[1.5rem] bg-[var(--surface-2)] max-[800px]:self-center">
     <Image
       src={project.data.image}
       alt={project.data.title}

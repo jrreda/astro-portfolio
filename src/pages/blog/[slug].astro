@@ -34,8 +34,10 @@ const pageTitle = `Blog - ${post.data.title}`;
         loading="eager"
       />
       <h1 class="mb-4">{post.data.title}</h1>
-      <p class="text-xl text-[var(--light)] mb-[30px]">{post.data.date}</p>
-      <div class="[&_h2]:mb-5 [&_h2]:mt-[30px]">
+      <p class="text-xl text-[var(--text-muted)] mb-[30px]">{post.data.date}</p>
+      <div
+        class="leading-8 text-[var(--text-muted)] [&_a]:text-[var(--primary)] [&_a]:underline [&_a]:underline-offset-4 [&_h2]:mb-5 [&_h2]:mt-[30px] [&_h2]:text-[var(--text)] [&_h2]:font-black [&_li]:my-1 [&_strong]:text-[var(--text)] [&_ul]:list-disc [&_ul]:pl-6"
+      >
         <Content />
       </div>
     </div>

@@ -1,64 +1,126 @@
 ---
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import me from '/public/images/me.jpg';
 import ButtonLink from './ButtonLink.astro';
 import Container from './Container.astro';
+import skillsData from '../data/skills.json';
+
+const projects = await getCollection('project');
+const projectCount = projects.length;
+
+// Count unique technologies across all skill categories
+const allSkills = Object.values(skillsData as Record<string, string[]>).flat();
+const techCount = new Set(allSkills).size;
+
+const stats = [
+  { value: '4+', label: 'Years experience' },
+  { value: `${projectCount}+`, label: 'Projects shipped' },
+  { value: `${techCount}+`, label: 'Technologies' },
+];
 ---
 
 <Container>
   <header
     class="relative justify-items-center items-center gap-16 max-[1000px]:gap-10 grid grid-cols-[minmax(0,1.1fr)_380px] max-[1000px]:grid-cols-1 max-[1000px]:grid-rows-auto py-24 max-[700px]:py-14"
   >
+    <!-- ambient hero glow -->
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute -top-10 -left-20 h-72 w-72 rounded-full bg-[var(--primary)]/20 blur-[120px] max-[1000px]:hidden"
+    >
+    </div>
+
     <div class="z-10 relative">
-      <p class="mb-5 eyebrow">Frontend Engineer</p>
-      <h1 class="mb-6 max-w-3xl font-black max-[480px]:text-4xl max-[700px]:text-5xl text-6xl leading-[0.95] tracking-[-0.05em]">
-        I build polished interfaces with <span class="gradient-text">React</span> and Next.js.
+      <span
+        data-reveal
+        class="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface-2)] px-3.5 py-1.5 font-mono text-xs font-semibold tracking-wide text-[var(--text-muted)]"
+      >
+        <span class="status-dot"></span>
+        Available for work
+      </span>
+
+      <p class="mb-5 eyebrow" data-reveal style="--reveal-delay:60ms">Frontend Engineer · 4+ years</p>
+
+      <h1
+        data-reveal
+        style="--reveal-delay:120ms"
+        class="mb-6 max-w-3xl font-black max-[480px]:text-4xl max-[700px]:text-5xl text-6xl leading-[0.95] tracking-[-0.05em]"
+      >
+        I build <span class="gradient-text-animated">polished interfaces</span> with React and Next.js.
       </h1>
-      <p class="mb-8 max-w-2xl text-[var(--muted)] text-lg leading-8">
+
+      <p
+        data-reveal
+        style="--reveal-delay:180ms"
+        class="mb-8 max-w-2xl text-[var(--text-muted)] text-lg leading-8"
+      >
         I'm Reda, a frontend developer focused on fast, accessible, and
         carefully crafted web apps. I turn product ideas into interfaces that
         feel sharp, responsive, and easy to use.
       </p>
-      <div class="flex max-[600px]:flex-col gap-3 mb-8">
-        <ButtonLink href="/projects" text="View projects" variant="secondary" />
+
+      <div
+        data-reveal
+        style="--reveal-delay:240ms"
+        class="flex max-[600px]:flex-col gap-3 mb-10"
+      >
+        <ButtonLink href="/projects" text="View projects" />
         <ButtonLink
           href="/resume.pdf"
           text="Download resume"
+          variant="secondary"
           isDownload={true}
         />
       </div>
-      <div class="gap-3 grid grid-cols-3 max-[600px]:grid-cols-1 max-w-xl">
-        <div class="p-4 rounded-2xl surface-card-soft">
-          <span class="block font-black text-[var(--dark)] text-2xl">React</span>
-          <span class="text-[var(--muted)] text-sm">component systems</span>
-        </div>
-        <div class="p-4 rounded-2xl surface-card-soft">
-          <span class="block font-black text-[var(--dark)] text-2xl">Next.js</span>
-          <span class="text-[var(--muted)] text-sm">full-stack UI</span>
-        </div>
-        <!-- <div class="p-4 rounded-2xl surface-card-soft">
-          <span class="block font-black text-[var(--dark)] text-2xl">Astro</span>
-          <span class="text-[var(--muted)] text-sm">fast content sites</span>
-        </div> -->
-      </div>
+
+      <dl
+        data-reveal
+        style="--reveal-delay:300ms"
+        class="gap-3 grid grid-cols-3 max-[600px]:grid-cols-3 max-w-xl"
+      >
+        {
+          stats.map((stat) => (
+            <div class="p-4 rounded-2xl surface-card-soft text-center max-[480px]:p-3">
+              <dt class="block font-black text-2xl max-[480px]:text-xl">
+                <span class="gradient-text">{stat.value}</span>
+              </dt>
+              <dd class="mt-1 text-[var(--text-muted)] text-xs leading-tight">{stat.label}</dd>
+            </div>
+          ))
+        }
+      </dl>
     </div>
-    <div class="relative max-[1000px]:row-start-1 p-8 rounded-[2rem] surface-card">
+
+    <div
+      data-reveal
+      style="--reveal-delay:200ms"
+      class="relative max-[1000px]:row-start-1 p-8 rounded-[2rem] surface-card"
+    >
+      <!-- glowing ring behind the photo -->
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute -inset-px rounded-[2rem] bg-gradient-to-br from-[var(--primary)]/40 via-transparent to-[var(--violet)]/30 opacity-60 blur-md"
+      >
+      </div>
       <Image
         src={me}
         alt="Reda"
         width={320}
         height={320}
         loading="eager"
-        class="z-10 relative shadow-2xl shadow-slate-900/15 rounded-[1.5rem] object-cover"
+        class="z-10 relative shadow-2xl shadow-black/40 rounded-[1.5rem] object-cover ring-1 ring-white/10"
       />
-      <div class="z-10 relative bg-white/85 shadow-slate-900/10 shadow-xl backdrop-blur -mt-10 mr-5 ml-5 p-4 border border-white/70 rounded-2xl">
+      <div
+        class="z-10 relative bg-[var(--bg-soft)]/90 shadow-black/30 shadow-xl backdrop-blur -mt-10 mr-5 ml-5 p-4 border border-[var(--border)] rounded-2xl"
+      >
         <div class="flex gap-1.5 mb-2">
-          <span class="bg-red-400 rounded-full size-2.5"></span>
-          <span class="bg-amber-400 rounded-full size-2.5"></span>
-          <span class="bg-emerald-400 rounded-full size-2.5"></span>
+          <span class="bg-red-400/90 rounded-full size-2.5"></span>
+          <span class="bg-amber-400/90 rounded-full size-2.5"></span>
+          <span class="bg-emerald-400/90 rounded-full size-2.5"></span>
         </div>
-        <code class="font-semibold text-[var(--dark)] text-sm">
-          ship(&#123; detail: 'pixel-perfect', speed: 'fast' &#125;)
+        <code class="font-mono font-medium text-[var(--text)] text-sm">
+          <span class="text-[var(--primary)]">ship</span>(&#123; detail: <span class="text-[var(--accent)]">'pixel-perfect'</span>, speed: <span class="text-[var(--accent)]">'fast'</span> &#125;)
         </code>
       </div>
     </div>

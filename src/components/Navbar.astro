@@ -12,11 +12,14 @@ const navItems = [
 
 const currentPath = Astro.url.pathname;
 const activeClass =
-  "text-[var(--primary)] bg-white shadow-sm";
-const hoverClass = "hover:text-[var(--primary)] hover:bg-white/70";
+  "text-[var(--primary)] bg-[var(--surface-strong)] border-[var(--border)]";
+const hoverClass = "hover:text-[var(--primary)] hover:bg-[var(--surface-2)]";
 ---
 
-<nav class="top-0 z-50 sticky bg-white/75 backdrop-blur-xl border-[var(--border)] border-b">
+<nav
+  data-nav
+  class="top-0 z-50 sticky bg-[var(--bg)]/70 backdrop-blur-xl border-b border-transparent transition-all duration-300 [&.scrolled]:border-[var(--border)] [&.scrolled]:bg-[var(--bg)]/85 [&.scrolled]:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
+>
   <Container>
     <div
       class="flex max-[640px]:flex-col justify-between items-center max-[640px]:gap-4 py-4"
@@ -32,7 +35,7 @@ const hoverClass = "hover:text-[var(--primary)] hover:bg-white/70";
             <li>
               <a
                 href={item.href}
-                class={`rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200 text-[var(--dark)] ${hoverClass}
+                class={`rounded-full border border-transparent px-4 py-2 text-sm font-semibold transition-all duration-200 text-[var(--text-muted)] ${hoverClass}
                   ${currentPath === item.href ? activeClass : ""}`}
                 aria-label={`Go to ${item.text} page`}
               >

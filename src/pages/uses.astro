@@ -105,16 +105,16 @@ const toolSections = [
                   {section.title}
                 </h2>
               </div>
-              <span class="bg-white px-3 py-1 border border-[var(--border)] rounded-full font-bold text-[var(--muted)] text-xs">
+              <span class="bg-[var(--surface-2)] px-3 py-1 border border-[var(--border)] rounded-full font-bold text-[var(--text-muted)] text-xs">
                 {section.items.length} tools
               </span>
             </div>
             <p class="mb-6 text-[var(--muted)] leading-7">{section.summary}</p>
             <ul class="gap-3 grid md:grid-cols-2 list-none">
               {section.items.map(([label, value]) => (
-                <li class="bg-white/70 p-4 border border-[var(--border)] rounded-2xl">
-                  <strong class="block mb-1 text-[var(--dark)] text-sm">{label}</strong>
-                  <span class="text-[var(--muted)] text-sm leading-6">{value}</span>
+                <li class="bg-[var(--surface)] p-4 border border-[var(--border)] rounded-2xl">
+                  <strong class="block mb-1 text-[var(--text)] text-sm">{label}</strong>
+                  <span class="text-[var(--text-muted)] text-sm leading-6">{value}</span>
                 </li>
               ))}
             </ul>

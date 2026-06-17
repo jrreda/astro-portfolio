@@ -14,13 +14,13 @@ const { post } = Astro.props;
   <div
     class="flex gap-[30px] items-center mb-5 max-[600px]:flex-col max-[600px]:gap-0.5 max-[600px]:items-start max-[600px]:mb-2.5 max-[600px]:mt-4"
   >
-    <p class="text-xl max-[600px]:m-0">{post.data.date}</p>
-    <span class="w-px h-[30px] bg-dark max-[600px]:hidden"></span>
-    <p class="text-xl text-[var(--light)] max-[600px]:m-0">
+    <p class="text-xl text-[var(--text-muted)] max-[600px]:m-0">{post.data.date}</p>
+    <span class="w-px h-[30px] bg-[var(--border)] max-[600px]:hidden"></span>
+    <p class="text-xl text-[var(--primary)] max-[600px]:m-0">
       {post.data.tags.join(', ')}
     </p>
   </div>
-  <p class="text-base text-[var(--dark)] mt-0 mb-10">{post.data.description}</p>
+  <p class="text-base text-[var(--text-muted)] mt-0 mb-10">{post.data.description}</p>
   <ButtonLink
     href={`/blog/${post.id}`}
     text="Read article"

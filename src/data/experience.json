@@ -1,0 +1,23 @@
+[
+  {
+    "role": "Frontend Engineer",
+    "company": "Freelance & Client Work",
+    "period": "2024 — Present",
+    "summary": "Building production web apps and e-commerce experiences for clients with React, Next.js, and Astro — focused on performance, accessibility, and clean component architecture.",
+    "stack": ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    "role": "Frontend Developer",
+    "company": "Add your company",
+    "period": "2022 — 2024",
+    "summary": "Developed and maintained responsive interfaces, shipped reusable component systems, and set up CI/CD pipelines with GitHub Actions to streamline delivery.",
+    "stack": ["React", "Sass", "Framer Motion", "GitHub Actions"]
+  },
+  {
+    "role": "Web Developer",
+    "company": "Add your company",
+    "period": "2021 — 2022",
+    "summary": "Built corporate websites and marketing pages, integrated CMS-driven content, and delivered pixel-perfect implementations from design handoffs.",
+    "stack": ["JavaScript", "Laravel", "WordPress", "MySQL"]
+  }
+]
