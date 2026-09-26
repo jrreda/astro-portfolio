@@ -27,14 +27,14 @@ const stats = [
     <!-- ambient hero glow -->
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute -top-10 -left-20 h-72 w-72 rounded-full bg-[var(--primary)]/20 blur-[120px] max-[1000px]:hidden"
+      class="max-[1000px]:hidden -top-10 -left-20 absolute bg-[var(--primary)]/20 blur-[120px] rounded-full w-72 h-72 pointer-events-none"
     >
     </div>
 
     <div class="z-10 relative">
       <span
         data-reveal
-        class="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface-2)] px-3.5 py-1.5 font-mono text-xs font-semibold tracking-wide text-[var(--text-muted)]"
+        class="inline-flex items-center gap-2 bg-[var(--surface-2)] mb-5 px-3.5 py-1.5 border border-[var(--border)] rounded-full font-mono font-semibold text-[var(--text-muted)] text-xs tracking-wide"
       >
         <span class="status-dot"></span>
         Available for work
@@ -67,7 +67,7 @@ const stats = [
       >
         <ButtonLink href="/projects" text="View projects" />
         <ButtonLink
-          href="/resume.pdf"
+          href="/Mahmoud Reda__Frontend_Resume.pdf"
           text="Download resume"
           variant="secondary"
           isDownload={true}
@@ -81,8 +81,8 @@ const stats = [
       >
         {
           stats.map((stat) => (
-            <div class="p-4 rounded-2xl surface-card-soft text-center max-[480px]:p-3">
-              <dt class="block font-black text-2xl max-[480px]:text-xl">
+            <div class="p-4 max-[480px]:p-3 rounded-2xl text-center surface-card-soft">
+              <dt class="block font-black max-[480px]:text-xl text-2xl">
                 <span class="gradient-text">{stat.value}</span>
               </dt>
               <dd class="mt-1 text-[var(--text-muted)] text-xs leading-tight">{stat.label}</dd>
@@ -100,7 +100,7 @@ const stats = [
       <!-- glowing ring behind the photo -->
       <div
         aria-hidden="true"
-        class="pointer-events-none absolute -inset-px rounded-[2rem] bg-gradient-to-br from-[var(--primary)]/40 via-transparent to-[var(--violet)]/30 opacity-60 blur-md"
+        class="absolute -inset-px bg-gradient-to-br from-[var(--primary)]/40 via-transparent to-[var(--violet)]/30 opacity-60 blur-md rounded-[2rem] pointer-events-none"
       >
       </div>
       <Image
@@ -109,7 +109,7 @@ const stats = [
         width={320}
         height={320}
         loading="eager"
-        class="z-10 relative shadow-2xl shadow-black/40 rounded-[1.5rem] object-cover ring-1 ring-white/10"
+        class="z-10 relative shadow-2xl shadow-black/40 rounded-[1.5rem] ring-1 ring-white/10 object-cover"
       />
       <div
         class="z-10 relative bg-[var(--bg-soft)]/90 shadow-black/30 shadow-xl backdrop-blur -mt-10 mr-5 ml-5 p-4 border border-[var(--border)] rounded-2xl"
